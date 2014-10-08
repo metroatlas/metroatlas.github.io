@@ -3,33 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>Metropolitan Atlas</title>
-        <style type="text/css">
-
-            div.center {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 500px;
-            }
-
-            h1, p {
-                font-family:"Helvetica Neue", Helvetica, sans-serif;
-                font-weight: 300;
-            }
-
-            h1 {
-                text-align:center;
-                line-height:100%;
-                font-size:300%;
-            }
-
-            .bold {
-                font-weight: bold;
-            }
-
-
-        </style>
-
+        <link rel="stylesheet" type="text/css" href="style.css">
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="http://d3js.org/queue.v1.min.js"></script>
         <script src="http://d3js.org/topojson.v1.min.js"></script>
@@ -41,14 +15,29 @@
     <div id = "title" class ="center">
             <h1>Metropolitan Atlas</h1>
             <p>
-                <span id="about" class="menuitem">About</span>
+                <span id="menuabout" class="menuitem">About</span>
                 <span>-</span>
-                <a id="localgovs" class="menuitem" href="http://metroatlas.github.io/localgovs/">Local Governments</a>
+                <a id="menulocalgovs" class="menuitem" href="http://metroatlas.github.io/localgovs/">Local Governments</a>
                 <span>-</span>
-                <span id="data" class="menuitem" >Data</span>
+                <span id="menudata" class="menuitem" >Data</span>
             </p>
     </div>
     <div id = "content" class ="center">
+
+        <div id = "about" class = "content">
+            <p>The Metropolitan Atlas is part of the research project <em>Democracy in the Metropolis</em>, conducted as part of his doctoral project by Thomas Favre-Bulle at the Swiss Federal Institute of Technology in Lausanne and the University of Stanford, the Bill Lane Center for the American West, and supported by the Swiss National Science Foundation.</p>
+            <p>For more information on the project, contact <a href="mailto:thomas.favre-bulle@epfl.ch">Thomas Favre-Bulle</a>.</p>
+        </div>
+
+        <div id = "data" class = "content">
+            <p>The Metropolitan Atlas is a project to assemble, compute and visualize data related to American metropolitan areas coming from various sources. All sources are publicly available in digital formats. The 1950 Census of total population by places has been digitalized at EPFL.</p>
+            <p>All data processing R files, original data files, as well as the comprehensive assembled database in open SQLite format is available on the GitHub repository <a href="https://github.com/metroatlas/dbpublic">metroatlas/dbpublic</a>.</p>
+        </div>
+
+        <div id = "localgovs" class = "content">
+            <p>Explore America's local governments in their metropolitan environment from 1950 to 2010.</p>
+            <img id="localgovsscreen" src="images/localgovsscreen.png" width="100%" alt="some_text">
+        </div>
 
     </div>
 

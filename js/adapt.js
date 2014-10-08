@@ -1,29 +1,29 @@
 // Script for adaptable content on the main page
 
 var update = function(ctype) {
+	// Reinitialize
+	$(".menuitem").removeClass("bold");
+	$('.content').removeClass('show')
 
-	var url = document.URL + 'content/' + ctype + '.html'
-	console.log(url);
-	var txt = $.get(url, function(data) {
-		$(".menuitem").removeClass("bold");
-		$("#" + ctype).addClass("bold");
-		$("#content").html(data);
-	});
+	// Toggle selected element
+	$("#menu" + ctype).addClass("bold");
+	$("#" + ctype).addClass("show");
 };
 
-d3.select("#localgovs")
+d3.select("#menulocalgovs")
 	.on("mouseover", function() {
 		update('localgovs');
 	});
 
-d3.select("#about")
+d3.select("#menuabout")
 	.on("mouseover", function() {
+		console.log('update about');
 		update('about');
 	});
 
-d3.select("#data")
+d3.select("#menudata")
 	.on("mouseover", function() {
 		update('data');
 	});
 
-update('about');
+update('localgovs');

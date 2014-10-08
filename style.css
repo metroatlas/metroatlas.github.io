@@ -20,6 +20,10 @@ h1 {
     font-weight: bold;
 }
 
-.hidden {
+.content {
     display: none;
+}
+
+.show {
+    display: block;
 }
