@@ -10,20 +10,16 @@ var update = function(ctype) {
 	$("#" + ctype).addClass("show");
 };
 
-d3.select("#menulocalgovs")
-	.on("mouseover", function() {
-		update('localgovs');
-	});
+$("#menulocalgovs").mouseover(function() {
+	update('localgovs');
+});
 
-d3.select("#menuabout")
-	.on("mouseover", function() {
-		console.log('update about');
-		update('about');
-	});
+$("#menuabout").mouseover(function() {
+	update('about');
+});
 
-d3.select("#menudata")
-	.on("mouseover", function() {
-		update('data');
-	});
+$("#menudata").mouseover(function() {
+	update('data');
+});
 
 update('localgovs');
