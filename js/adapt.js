@@ -21,5 +21,3 @@ $("#menuabout").mouseover(function() {
 $("#menudata").mouseover(function() {
 	update('data');
 });
-
-update('localgovs');
